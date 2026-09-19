@@ -2,24 +2,158 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brückenkurs 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --papier: #fcfbf7;
+      --karo: #e3e7ef;
+      --tinte: #22304f;
+      --tinte-hell: #64708c;
+      --kuli: #2547c0;
+      --marker: #ffe873;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "STIX Two Text", Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      line-height: 1.65;
+      color: var(--tinte);
+      background-color: var(--papier);
+      background-image:
+        linear-gradient(var(--karo) 1px, transparent 1px),
+        linear-gradient(90deg, var(--karo) 1px, transparent 1px);
+      background-size: 26px 26px;
+    }
+
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 1rem;
+    }
+
+    h1 span {
+      background: linear-gradient(100deg,
+        transparent 0 2%,
+        var(--marker) 5% 95%,
+        transparent 98% 100%);
+      padding: 0.05em 0.35em;
+      margin-left: -0.35em;
+    }
+
+    .untertitel {
+      margin: 0 0 1.5rem;
+      font-size: 1.15rem;
+    }
+
+    .disclaimer {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--tinte-hell);
+      border-left: 3px solid var(--marker);
+      padding-left: 0.9rem;
+      margin: 0 0 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2.8rem 0 0.4rem;
+      border-bottom: 2px solid var(--tinte);
+      padding-bottom: 0.25rem;
+    }
+
+    ul.dateien {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.dateien li {
+      border-bottom: 1px solid var(--karo);
+    }
+
+    ul.dateien a {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.25rem 0.75rem;
+      padding: 0.8rem 0.4rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul.dateien a:hover,
+    ul.dateien a:focus-visible {
+      background: rgba(255, 232, 115, 0.35);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--kuli);
+      outline-offset: 2px;
+    }
+
+    .titel {
+      font-weight: 600;
+      color: var(--kuli);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .thema {
+      color: var(--tinte-hell);
+      font-size: 1rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--tinte-hell);
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.9rem; }
+      main { padding-top: 2.5rem; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Brückenkurs 2025</h1>
-  <p>Hier findet ihr Lösungen, Bilder und mehr zum Brückenkurs.</p>
-  <p><strong>Disclaimer:</strong> Bei den unten verlinkten Dokumenten handelt es sich nicht um vollständige Lösungen, und Fehlerlosigkeit wird nicht garantiert.</p>
+  <main>
+    <h1><span>Brückenkurs 2025</span></h1>
+    <p class="untertitel">Hier findet ihr Lösungen, Bilder und mehr zum Brückenkurs.</p>
+    <p class="disclaimer">Bei den unten verlinkten Dokumenten handelt es sich nicht um vollständige Lösungen, und Fehlerlosigkeit wird nicht garantiert.</p>
 
-  <h2>Lösungen</h2>
-  <ul>
-    <li><a href="Tutorium 1 - Lösungen.pdf">Tutorium 1</a></li>
-    <li><a href="Tutorium 2 - Lösungen.pdf">Tutorium 2</a></li>
-    <li><a href="Tutorium 3 - Lösungen.pdf">Tutorium 3</a></li>
-    <li><a href="Tutorium 4 - Lösungen.pdf">Tutorium 4</a></li>
-    <li><a href="Präsenzblatt I.pdf">Präsenzblatt I</a></li>
-    <li><a href="Tutorium 6.pdf">Tutorium 6</a></li>
-    <li><a href="Nachtrag Präsenzblatt II.pdf">Nachtrag Präsenzblatt II</a></li>
-  </ul>
+    <h2>Lösungen</h2>
+    <ul class="dateien">
+      <li><a href="Tutorium-1-Loesungen.pdf"><span class="titel">Tutorium 1</span> <span class="thema">Mythen der Mathematik</span></a></li>
+      <li><a href="Tutorium-2-Loesungen.pdf"><span class="titel">Tutorium 2</span> <span class="thema">Aussagenlogik</span></a></li>
+      <li><a href="Tutorium-3-Loesungen.pdf"><span class="titel">Tutorium 3</span> <span class="thema">Quantoren</span></a></li>
+      <li><a href="Tutorium-4-Loesungen.pdf"><span class="titel">Tutorium 4</span> <span class="thema">Teilbarkeit, Teil I</span></a></li>
+      <li><a href="Praesenzblatt-I.pdf"><span class="titel">Präsenzblatt I</span></a></li>
+      <li><a href="Tutorium-6.pdf"><span class="titel">Tutorium 6</span></a></li>
+      <li><a href="Nachtrag-Praesenzblatt-II.pdf"><span class="titel">Nachtrag Präsenzblatt II</span></a></li>
+    </ul>
 
-  <h2>Bilder</h2>
-  <ul>
-  <a href="Untitled design(3).png" target="_blank">Bild 1</a>
+    <h2>Bilder</h2>
+    <ul class="dateien">
+      <li><a href="bild-1.png" target="_blank"><span class="titel">Bild 1</span></a></li>
+    </ul>
+
+    <footer>Ohne Gewähr – Fehler gern im Tutorium melden.</footer>
+  </main>
+</body>
+</html>
