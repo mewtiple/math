@@ -1,2 +1,2 @@
 # sigl
-^_^
+all sorts of math
